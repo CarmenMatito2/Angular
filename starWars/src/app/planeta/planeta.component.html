@@ -1,0 +1,20 @@
+<h3>Datos del planeta</h3>
+<div>
+  <b>Nombre:</b> {{planeta.name}} <br>
+  <!-- 
+    <div>
+      <b>Población: </b> {{planeta.population | number}}
+    </div>
+  -->
+  <div>
+      <b>Población: </b>
+        {{(planeta.population =="unknown") ? (planeta.population) : (planeta.population | number) }}
+  </div>
+
+
+  <b>Gravedad: </b> {{planeta.gravity}}  <br>
+  <b>Clima: </b>    {{planeta.climate}}  <br>
+  <b>Diámetro:</b>  {{planeta.diameter | number}} kilómetros.<br>
+  <b>Período de rotación: </b>{{planeta.rotation_period}} horas.<br> 
+  <b>Período orbital: </b> {{planeta.orbital_period}} días.
+</div>
