@@ -28,4 +28,17 @@ export class PAjaxService {
     console.log("Toy en petiAurl");
     return this.http.get(url);
   }
+
+
+  //Creamos un unción para hacer peticiones a lista personas. (Con POST).
+  hecerPetiListapersonas(){
+    //creamos variable para la url de localhost...
+    let url= "http://localhost/AJAX/JQuery_ListaPersonas/servidor.php";
+
+    let parametro ={
+      servicio: "listar"
+    }
+    return this.http.post(url, JSON.stringify(parametro));
+  }
+
 }

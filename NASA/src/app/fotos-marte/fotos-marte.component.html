@@ -1,5 +1,4 @@
 
-
 <!--Otro título....-->
 <p>Aquí podemos ver algunas fotos de Marte.</p>
 
@@ -7,17 +6,17 @@
 <!--Con el *ngFor voy reorriendo el array "photos", y se van imprimiendo.-->
 <!--Utilizamos  target="_blank" para que la imagen se abra en otra página diferente. -->
 <ol *ngFor="let f of listaFotos">
-    <li><b>Imagen:   </b> {{f.id}}                          </li>
-    <li><b>Fecha de la tierra:</b> {{f.earth_date}}                 </li>
+    <li><b>Imagen:              </b> {{f.id}}                         </li>
+    <li><b>Fecha de la tierra:  </b> {{f.earth_date}}                 </li>
     <a href="{{f.img_src}}" target="_blank"> <img src="{{f.img_src}}" > </a>
-    <li><b>Rover:</b>                                       </li>
+    <li><b>Rover:</b>                                                 </li>
 
     <!-- Y aquí dentro otra lista desordenada "ul", para los puntos secundarios. -->
     <ul>
-        <li><b>Nombre:       </b> {{f.rover.name}}          </li>
+        <li><b>Nombre:                </b> {{f.rover.name}}          </li>
         <li><b>Fecha de lanzamiento:  </b> {{f.rover.launch_date}}   </li>
-        <li><b>Fecha de aterrizaje: </b> {{f.rover.landing_date}}  </li>
-        <li><b>Estado:       </b> {{f.rover.status}}        </li>
+        <li><b>Fecha de aterrizaje:   </b> {{f.rover.landing_date}}  </li>
+        <li><b>Estado:                </b> {{f.rover.status}}        </li>
     </ul>
 
     <br>
@@ -26,13 +25,10 @@
     <br>
 </ol>
 
-
-<!--
-<div>
-
- <img class="logo" src="assets/nasa.jpg">
-
+<h4>Lista de personas:</h4>
+<div *ngFor="let p of listaPersonas">
+    <div>DNI: {{p.DNI}}</div>
+    <div>NOMBRE: {{p.NOMBRE}}</div>
+    <div>APELLIDOS: {{p.APELLIDOS}}</div>
+    <hr>
 </div>
-
--->
-
